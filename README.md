@@ -19,6 +19,7 @@
   <li>CSS</li>
   <li>Bootstrap</li>
   <li>JavaScript</li>
+  <li>jQuery
 </ul>
 <p>Funkcjonalności:</p>
 <ul>
