@@ -20,3 +20,10 @@
   <li>Bootstrap</li>
   <li>JavaScript</li>
 </ul>
+<p>Funkcjonalności:</p>
+<ul>
+  <li>Rejerstrowanie użytkownika</li>
+  <li>Dodowanie wpisu/posta przez użytkownika</li>
+  <li>Komentowanie, lajkowanie wpisu/posta</li>
+  <li>Wyświetlanie dodawanych postów na stronie głównej strony</li>
+</ul>
