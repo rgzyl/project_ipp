@@ -1,0 +1,1 @@
+Zapoznanie siê z bibliotek¹ django. Wymyœlenie wygl¹du projektu. W ci¹gu kilku dni stworzenie podstawowego wygl¹du strony po³¹czonego z Bootstrap. Stworzenie modeli formularzy. 
