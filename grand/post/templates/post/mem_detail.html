@@ -1,0 +1,85 @@
+﻿{% extends "post/base.html" %}
+{% block content %}
+<div class="row">
+	<div class="col-md-8">
+	<br>
+	
+	<div class="card mb-4">
+		<img class="card-img-top" src="{{ object.image.url }}">
+		<div class="card-body">
+			<h2 class="card-title">{{ object.title }}</h2>
+			<p class="card-text">{{ object.content }}</p>
+			{% if object.author == user %}
+			<a href="{% url 'mem-update' object.id%}" class="btn btn-primary">Aktualizuj</a>
+			<a href="{% url 'mem-delete' object.id%}" class="btn btn-primary">Usuń</a>
+			{% endif %}
+		</div>
+		
+			
+			<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2&appId=377731169103091&autoLogAppEvents=1"></script>
+			<div class="fb-like" data-href="{% url 'mem-detail' object.id %}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+			
+		<div class="card-footer text-muted">
+			Opublikowano przez  {{ object.author }}, {{ object.date_posted }}
+		</div>
+		
+		
+	</div>
+</div>
+	<div class="col-md-4">
+		<div class="card my-4">
+			<h5 class="card-header">Wyszukaj</h5>
+			<div class="card-body">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Podaj słowo klucz">
+					<span class="input-group-btn">
+						<button class="btn btn-secondary" type="button">Go!</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	<div class="card my-4">
+		<h5 class="card-header">Kategorie</h5>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<ul class="list-unstyled mb-0">
+							<li>
+								<a href="#">HTML</a>
+							</li>
+							<li>
+								<a href="#">CSS</a>
+							</li>
+							<li>
+								<a href="#">JavaScript</a>
+							</li>
+						</ul>
+					</div>
+				<div class="col-lg-6">
+					<ul class="list-unstyled mb-0">
+						<li>
+							<a href="#">Bootstrap</a>
+						</li>
+						<li>
+							<a href="#">PHP</a>
+						</li>
+						<li>
+							<a href="#">Python</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card my-4">
+		<h5 class="card-header">Panel boczny</h5>
+		<div class="card-body">
+			Aplikacja systemowa w systemach operacyjnych Microsoft Windows, gromadząca w jednym miejscu narzędzia do ustawiania i zmiany parametrów systemu operacyjnego.
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+{% endblock content %}

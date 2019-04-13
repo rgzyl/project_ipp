@@ -5,11 +5,15 @@
 	<br>
 	{% for post in posts %}
 	<div class="card mb-4">
-		<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+		<img class="card-img-top" src="{{ post.image.url }}">
 		<div class="card-body">
 			<h2 class="card-title">{{ post.title }}</h2>
 			<p class="card-text">{{ post.content }}</p>
-			<a href="#" class="btn btn-primary">Czytaj więcej &rarr;</a>
+			<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2&appId=377731169103091&autoLogAppEvents=1"></script>
+			<div class="fb-like" data-href="{% url 'mem-detail' post.id %}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+			<br>
+			<a href="{% url 'mem-detail' post.id %}" class="btn btn-primary">Czytaj więcej &rarr;</a>
 		</div>
 		<div class="card-footer text-muted">
 			Opublikowano przez  {{ post.author }}, {{ post.date_posted }}
