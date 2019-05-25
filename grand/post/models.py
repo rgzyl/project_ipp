@@ -6,7 +6,7 @@ from PIL import Image
 
 class Mem(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
+    content = models.CharField(max_length=200)
     image = models.ImageField(default='default.jpg', upload_to='mems', blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
