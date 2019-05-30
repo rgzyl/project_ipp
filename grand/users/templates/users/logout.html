@@ -1,9 +1,31 @@
 ﻿{% extends "post/base.html" %}
 {% block content %}
-		<h2>Zostałeś wylogowany</h2>
-		<div class="border-top pt-3">
-			<small class="text-muted">
-				<a class="ml-2" href="{% url 'login' %}">Zaloguj się ponownie!</a>
-			</small>
-		</div>
+<style>
+	#bg {
+		padding-top: 125px;
+		padding-bottom:10px;
+		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align:center;
+		color: #fed136;
+		font-family: 'Montserrat', sans-serif;
+	}
+</style>
+
+<div id="bg">
+	<h2 class="card-title">Zostałeś wylogowany</h2>
+</div>
+<br/>
+<div class="container" style="text-align:center;">
+	<h1>Zostałeś wylogowany prawidłowo</h1>
+	<img src="https://cdn.pixabay.com/photo/2015/08/17/04/41/smilies-892013_960_720.png"/ width="45%">
+	<h2> Zapraszamy ponownie do odwiedzenia naszej strony </h2>
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			<a class="ml-2" href="{% url 'login' %}">Zaloguj się ponownie!</a>
+		</small>
+	</div>
+</div>
+<br/>
 {% endblock content %}

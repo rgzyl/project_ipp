@@ -1,6 +1,25 @@
 ﻿{% extends "post/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<style>
+	#bg {
+		padding-top: 125px;
+		padding-bottom:10px;
+		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align:center;
+		color: #fed136;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 25px;;
+	}
+</style>
+
+<div id="bg">
+	<h2 class="card-title">Zaloguj się</h2>
+</div>
+<br /><br /><br/>
+<div class="container">
 	<div class="content-section">
 		<form method="POST">
 			{% csrf_token %}
@@ -18,4 +37,6 @@
 			</small>
 		</div>
 	</div>
+</div>
+<br /><br/><br/>
 {% endblock content %}
