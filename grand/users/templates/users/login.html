@@ -5,7 +5,7 @@
 	#bg {
 		padding-top: 125px;
 		padding-bottom:10px;
-		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background: url(https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align:center;
@@ -13,10 +13,14 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 25px;;
 	}
+	
+	label {
+		color:white;
+	}
 </style>
 
 <div id="bg">
-	<h2 class="card-title">Zaloguj się</h2>
+	<h2 class="card-title">Zaloguj sie</h2>
 </div>
 <br /><br /><br/>
 <div class="container">
@@ -24,11 +28,11 @@
 		<form method="POST">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Panel logowania</legend>
+				<legend class="border-bottom mb-4" style="color:white;">Panel logowania</legend>
 				{{ form|crispy }}
 			</fieldset>
 			<div class="form-group">
-				<button class="btn btn-outline-info" type="submit">Loguj</button>
+				<button class="btn btn-primary text-uppercase btn-outline-info" type="submit">Loguj</button>
 			</div>
 		</form>
 		<div class="border-top pt-3">

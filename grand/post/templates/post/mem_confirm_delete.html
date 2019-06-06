@@ -4,7 +4,7 @@
 	#bg {
 		padding-top: 125px;
 		padding-bottom:10px;
-		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background: url(https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align:center;
@@ -14,7 +14,7 @@
 </style>
 
 <div id="bg">
-	<h2 class="card-title">Usuń mem</h2>
+	<h2 class="card-title">Usun mem</h2>
 </div>
 <br/>
 <div class="container">
@@ -22,11 +22,11 @@
 		<form method="POST">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<h2>Czy jesteś pewien usunięcia postu "{{ object.title }}"
+				<h2 style="color:white; font-family:Corbel;">Czy jesteś pewien usunięcia postu "{{ object.title }}"
 			</fieldset>
 			<img src="https://images.vexels.com/media/users/3/134491/isolated/preview/c4aed5e8b55387c429d1f9b36a9859b2-cry-emoji-emoticon-by-vexels.png" width="45%" style="margin: 0 auto; display:block;">
 			<div class="form-group">
-				<button class="btn btn-outline-danger" type="submit">Tak, usuń</button>
+				<button class="btn btn-outline-danger" type="submit">Tak, usun</button>
 				<a class="btn btn-outline-secondary" href="{% url 'mem-detail' object.id %}">Anuluj</a>
 			</div>
 		</form>

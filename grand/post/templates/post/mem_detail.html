@@ -5,48 +5,52 @@
 	#bg {
 		padding-top: 125px;
 		padding-bottom:10px;
-		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background: url(https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align:center;
 		color: #fed136;
-		font-family: 'Montserrat', sans-serif;
+		font-family: Arial;
 	}
 </style>
 
 <div id="bg">
-	<h2 class="card-title">{{ object.title }}</h2>
+	<h2 class="card-title" style="font-family:Arial;">_ _ _</h2>
 </div>
 
 <div class="container">
+	<br><br>
+	<p style="color:white; font-size:20px; font-family:Corbel;"><a href="{% url 'post-home'%}">strona główna</a> >>> <a href="">{{ object.title }}</a></p>
 	<div class="row">
 		<div class="col-md-8">
 		<br>
 		
-		<div class="card mb-4">
+		<div class="card mb-4" style="background-color:#313131; color:white;">
 			<img class="card-img-top" src="{{ object.image.url }}">
 			<div class="card-body">
-				<h2 class="card-title">{{ object.title }}</h2>
-				<p class="card-text">{{ object.content }}</p>
+				<h2 class="card-title" style="font-family:Corbel;">{{ object.title }}</h2>
+				<a href=""><p class="card-text">{{ object.content }}</p></a>
 				{% if object.author == user %}
+				<p> &nbsp; </p>
 				<a href="{% url 'mem-update' object.id%}" class="btn btn-primary">Aktualizuj</a>
-				<a href="{% url 'mem-delete' object.id%}" class="btn btn-primary">Usuń</a>
+				<a href="{% url 'mem-delete' object.id%}" class="btn btn-primary">Usun</a>
+				<p> &nbsp; </p>
 				{% endif %}
-			</div>
 			
 				
 				<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2&appId=377731169103091&autoLogAppEvents=1"></script>
 				<div class="fb-like" data-href="{% url 'mem-detail' object.id %}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 
-				
+		</div>
+		
 			<div class="card-footer text-muted">
-				Opublikowano przez  {{ object.author }}, {{ object.date_posted }}
-				<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="700" data-numposts="5"></div> 
+				<p style="color:white;"><i>Opublikowano przez  {{ object.author }}, {{ object.date_posted }}</i></p>
+			<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="700" data-numposts="5"></div> 
+			</div>
 			</div>
 			
-			
-		</div>
+		
 	</div>
 	<div class="col-md-4">
 		<br/>

@@ -5,29 +5,33 @@
 	#bg {
 		padding-top: 125px;
 		padding-bottom:10px;
-		background: url(http://srokate.pl/wp-content/uploads/2014/03/dark-background-1.jpg);
+		background: url(https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align:center;
 		color: #fed136;
 		font-family: 'Montserrat', sans-serif;
 	}
+	
+	label {
+		color:white;
+	}
 </style>
 
 <div id="bg">
-	<h2 class="card-title">Dodaj MEM-a</h2>
+	<h2 class="card-title" style="color:white;">Dodaj MEM-a</h2>
 </div>
 <br/><br/>
-<div class="container">
+<div class="container" style="color:grey;">
 	<div class="content-section">
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Dodaj nowy mem</legend>
+				<legend style="color:white;" class="border-bottom mb-4">Dodaj nowy mem</legend>
 				{{ form|crispy }}
 			</fieldset>
 			<div class="form-group">
-				<button class="btn btn-outline-info" type="submit">Dodaj</button>
+				<button class="btn btn-primary text-uppercase btn-outline-info" type="submit">Dodaj</button>
 			</div>
 		</form>
 	</div>

@@ -1,32 +1,40 @@
 ﻿{% extends "post/base.html" %}
 {% block content %}
 
-<header class="masthead">
-	<div class="container">
-		<div class="intro-text">
-			<div class="intro-lead-in">Witamy na naszej stronie !</div>
-			<div class="intro-heading text-uppercase">Zapraszamy na najlepsze memy w sieci</div>
-			<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">ZOBACZ</a>
-		</div>
-	</div>
-</header>
-	
+<style>
+	#bg {
+		padding-top: 125px;
+		padding-bottom:10px;
+		background: url(https://img.freepik.com/free-vector/dark-wall-background_1390-191.jpg?size=338&ext=jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align:center;
+		color: #fed136;
+		font-family: Corbel;
+	}
+</style>
+
+<div id="bg">
+	<h2 class="card-title">_ _ _</h2>
+</div>
+
 <div class="container" id="portfolio">
 <div class="row">
 	<div class="col-md-8">
 	<br>
 	{% for post in posts %}
-	<div class="card mb-4">
-		<a href="{% url 'mem-detail' post.id %}"><h2 style="text-align:center; padding:10px; text-decoration:none;" class="card-title">{{ post.title }}</h2></a>
+	<div class="card mb-4" style="background-color:#313131; color:white;">
+		<a href="{% url 'mem-detail' post.id %}"><h2 style="text-align:center; padding:10px; text-decoration:none; color:white; font-family:Corbel;" class="card-title">{{ post.title }}</h2></a>
 		<a href="{% url 'mem-detail' post.id %}"><img class="card-img-top" src="{{ post.image.url }}"></a>
 		<div class="card-body">
-			<p class="card-text">{{ post.content }}</p>
+			<a href=""><p class="card-text">{{ post.content }}</p></a>
 			<div id="fb-root"></div>
 			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2&appId=377731169103091&autoLogAppEvents=1"></script>
 			<div class="fb-like" data-href="{% url 'mem-detail' post.id %}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 		</div>
 		<div class="card-footer text-muted">
-			Opublikowano przez  {{ post.author }}, {{ post.date_posted }}
+		<br/>
+			<p style="color:white;"><i>Opublikowano przez  {{ post.author }}, {{ post.date_posted }}</i></p>
 		</div>
 	</div>
 	{% endfor %}
