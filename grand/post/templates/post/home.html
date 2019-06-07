@@ -15,7 +15,7 @@
 </style>
 
 <div id="bg">
-	<h2 class="card-title">_ _ _</h2>
+	<img src="http://strzegom2019.pl/templates/ep-me2019/images/logo.png" style="width:60%">
 </div>
 
 <div class="container" id="portfolio">
@@ -27,7 +27,7 @@
 		<a href="{% url 'mem-detail' post.id %}"><h2 style="text-align:center; padding:10px; text-decoration:none; color:white; font-family:Corbel;" class="card-title">{{ post.title }}</h2></a>
 		<a href="{% url 'mem-detail' post.id %}"><img class="card-img-top" src="{{ post.image.url }}"></a>
 		<div class="card-body">
-			<a href=""><p class="card-text">{{ post.content }}</p></a>
+			<a href="{% url 'mem-detail' post.id %}"><p class="card-text">{{ post.content }}</p></a>
 			<div id="fb-root"></div>
 			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2&appId=377731169103091&autoLogAppEvents=1"></script>
 			<div class="fb-like" data-href="{% url 'mem-detail' post.id %}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
